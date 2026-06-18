@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Outfit', 'Inter', sans-serif;
+    background-color: #030014;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  /* Custom Glow Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(3, 0, 20, 0.5);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.6);
+  }
+}
+
+/* Premium Glassmorphism utility */
+.glass {
+  background: rgba(10, 5, 36, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-hover:hover {
+  background: rgba(10, 5, 36, 0.6);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.1);
+}
+
+/* Interactive Grid Background */
+.grid-bg {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Aurora Backdrop glow effects */
+.aurora-glow-purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+}
+.aurora-glow-blue {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+}
+.aurora-glow-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+}
+
+/* ThreeJS Canvas overlay */
+.three-canvas-container canvas {
+  pointer-events: none;
+}
+
+/* React Flow custom CSS to match dark theme */
+.react-flow__renderer {
+  background: #030014;
+}
+.react-flow__node {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #06b6d4 !important;
+  border: 2px solid #030014 !important;
+}
+.react-flow__handle:hover {
+  background: #8b5cf6 !important;
+  transform: scale(1.3);
+}
+.react-flow__edge-path {
+  stroke: rgba(255, 255, 255, 0.2) !important;
+  stroke-width: 2 !important;
+}
+.react-flow__edge.animated .react-flow__edge-path {
+  stroke: #8b5cf6 !important;
+  stroke-dasharray: 5;
+  animation: dash 1s linear infinite;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.react-flow__controls {
+  background: rgba(10, 5, 36, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+.react-flow__controls-button {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  fill: #fff !important;
+}
+.react-flow__controls-button:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Upgrade neon glows and transitions */
+.shadow-glow-pink {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+.shadow-glow-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+.shadow-glow-purple {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+.comment-marker {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.comment-marker:hover {
+  transform: scale(1.15) translateY(-2px);
+}
+.cursor-cell {
+  cursor: cell !important;
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .7;
+    transform: scale(1.03);
+  }
+}
