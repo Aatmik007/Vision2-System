@@ -316,9 +316,7 @@ export default function Workspace({ setPage, projectId }) {
 
     socket.emit('cursor-move', { x, y });
   };  // AI Modifier state
-  const [isAIModifierOpen, setIsAIModifierOpen] = useState(false);
-  const [aiPrompt, setAiPrompt] = useState('');
-  const [aiModifying, setAiModifying] = useState(false);
+
 
   // Custom Node Injector state
   const [customNodeName, setCustomNodeName] = useState('');
